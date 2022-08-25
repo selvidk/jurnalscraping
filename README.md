@@ -13,7 +13,7 @@ Fitur aplikasi ini antara lain adalah:
 ## Dikembangkan menggunakan
 - Framework Laravel versi 8
 - HTML5
-- Template Bootstrap 5, [Startbootsrap](https://startbootstrap.com/) dan [Adminkit] (https://demo.adminkit.io/?theme=default)
+- Template Bootstrap 5, [Startbootsrap](https://startbootstrap.com/) dan [Adminkit](https://demo.adminkit.io/?theme=default)
 - JavaScript
 - MySQL (dengan XAMPP)
 
