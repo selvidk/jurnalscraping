@@ -17,8 +17,8 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->jurnal   = new DataJurnalM();
-        $this->pencarian   = new PencarianM();
+        $this->jurnal    = new DataJurnalM();
+        $this->pencarian = new PencarianM();
     }
 
     /**
@@ -55,9 +55,15 @@ class HomeController extends Controller
                       ->orderBy('total', 'DESC')
                       ->limit(10)
                       ->get();
-        for($i=0; $i<count($cek_label); $i++){
-            $label[] = $cek_label[$i]->kata_kunci;
-            $total[] = $cek_label[$i]->total;
+
+        if(count($cek_label) == 0) {
+            $label   = 'Belum Ada Pencarian'; 
+            $total   = 0;
+        } else {
+            for($i=0; $i<count($cek_label); $i++){
+                $label[] = $cek_label[$i]->kata_kunci;
+                $total[] = $cek_label[$i]->total;
+            }
         }
         
         // return $label;
