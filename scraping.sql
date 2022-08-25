@@ -90,9 +90,7 @@ CREATE TABLE `t_admin` (
 -- Dumping data for table `t_admin`
 --
 
-INSERT INTO `t_admin` (`id`, `email`, `nama_admin`, `password`, `level`, `remember_token`, `tgl_buat`, `tgl_ubah`) VALUES
-(2, 'selvi.dwikartika30@gmail.com', 'SuperAdmin', '$2y$10$GOigddvqH5gIj9SBs08cZ.qbC9Dj69D2hAzPAiD2Q58TvCaEyeyGC', 1, 'lUM9z460ix1VyHBpzxK60nu0n2qYEbyxgoyCmndRTHO5VqizHZkNFa0F1Z9q', '2022-03-25 16:20:51', '2022-07-04 09:14:02'),
-(3, 'admin@gmail.com', 'Admin', '$2y$10$Jnsk1BQvbwp07kGAUQAvCeMuB/qBJUaRrQGcfLcx8qGlMWK7Z77/y', 2, '', '2022-03-31 13:23:53', '2022-06-26 09:09:19');
+INSERT INTO `t_admin` (`id`, `email`, `nama_admin`, `password`, `level`, `remember_token`, `tgl_buat`, `tgl_ubah`) VALUES (3, 'admin@gmail.com', 'SuperAdmin', '$2y$10$Jnsk1BQvbwp07kGAUQAvCeMuB/qBJUaRrQGcfLcx8qGlMWK7Z77/y', 2, '', '2022-03-31 13:23:53', '2022-06-26 09:09:19');
 
 -- --------------------------------------------------------
 
