@@ -19,7 +19,7 @@ class admin extends Seeder
             'email'      => 'admin@gmail.com',
             'nama_admin' => 'admin',
             'password'   => Hash::make('admin'),
-            'level'      => 'SuperAdmin',
+            'level'      => 1,
             'tgl_buat'   => date('Y-m-d H:i:s'),
         ]);
     }
