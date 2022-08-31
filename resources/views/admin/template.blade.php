@@ -13,19 +13,14 @@
 
 	<title>Jurnal Scraping | @yield('title')</title>
 	<link rel="stylesheet" href="{{ url('admin/css/app.css')}}" />
-	{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 
 	<link rel="canonical" href="https://demo.adminkit.io/charts-chartjs.html" />
 	<link class="js-stylesheet" href="{{ url('admin/css/light.css') }}" rel="stylesheet">
-	{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
-
-	{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  --}}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	
-	<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">-->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
 </head>
 
@@ -94,7 +89,6 @@
                 				<i class="align-middle" data-feather="settings"></i>
               				</a>
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-                			{{-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" /> --}}
 								<span class="text-dark">{{ Auth::user()->nama_admin }}</span>
               				</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -119,7 +113,6 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-								{{-- <a href="/login" type="button" class="btn btn-primary">Log out</a> --}}
 								<a class="btn btn-primary" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -145,22 +138,6 @@
 								Copyright &copy; Jurnal Scraping 2022
 							</p>
 						</div>
-						{{-- <div class="col-6 text-right">
-							<ul class="list-inline">
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Help Center</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms</a>
-								</li>
-							</ul>
-						</div> --}}
 					</div>
 				</div>
 			</footer>
@@ -185,7 +162,6 @@
             // document.getElementById("example_next").innerHTML = example_next.replace("Next", ">");
         });
     </script>
-
 	<script>
 		function previewFile(input){
 			var file=$("input[type=file]").get(0).files[0];
@@ -199,9 +175,6 @@
 			}
 		}
 	</script>
-
-
-
 	<script>
 		function back(){
 			window.history.back();
@@ -215,14 +188,6 @@
 			$('#tabMenu a[href="#{{ old('tab') }}"]').tab('show')
 		});
 	</script>
-	{{-- <script type='text/javascript'>
-		$(".sidebar-nav>li").each(function() {
-			// var navItem = $(this);
-			// if (navItem.find("a").attr("href") == location.pathname) {
-			// 	navItem.addClass("active");
-			// }
-		});
-	</script> --}}
 </body>
 
 </html>

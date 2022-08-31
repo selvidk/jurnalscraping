@@ -33,13 +33,6 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        // $filecounter=("counter.txt");
-        // $kunjungan  =file($filecounter);
-        // $kunjungan[0]++;
-        // $file       =fopen($filecounter,"w");
-        // fputs($file,"$kunjungan[0]");
-        // fclose($file);
-        
         $jurnal     = $this->jurnal->data()->count();
         $kategori   = $this->jurnal->data()->leftJoin('t_kategori', 't_kategori.id_jurnal', '=', 't_jurnal.id_jurnal')->whereNull('t_kategori.id_jurnal')->count();
         $jadwal     = $this->jurnal->data()->leftJoin('t_publikasi_jurnal', 't_publikasi_jurnal.id_jurnal', '=', 't_jurnal.id_jurnal')->whereNull('t_publikasi_jurnal.id_jurnal')->count();
@@ -66,7 +59,6 @@ class HomeController extends Controller
             }
         }
         
-        // return $label;
         return view('admin.beranda', ['total_j' => $jurnal, 'kategori_null' => $kategori, 'jadwal_null' => $jadwal, 'pencarian' => $pencarian, 'labels' => $label, 'total' => $total]);
     }
 }

@@ -11,8 +11,6 @@ use App\Models\PencarianM;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-// use Illuminate\Support\Facades\Input;
-// use Illuminate\Support\Facades\Input;
 
 class PencarianC extends Controller
 {
@@ -78,7 +76,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('nama_kategori', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -93,7 +90,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('bulan', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -108,7 +104,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('bulan', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -123,7 +118,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('bulan', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -137,7 +131,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('bulan', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -151,7 +144,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('nama_kategori', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -165,7 +157,6 @@ class PencarianC extends Controller
                         ->where(function($query) use ($q) {
                             $query->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                                   ->orWhere('nama_pt', 'LIKE', '%'.$q.'%');
-                                //   ->orWhere('nama_kategori', 'LIKE', '%'.$q.'%');
                         })
                         ->groupBy('t_jurnal.id_jurnal')
                         ->paginate(10)
@@ -178,7 +169,6 @@ class PencarianC extends Controller
                         ->where('nama_jurnal', 'LIKE', '%'.$q.'%')
                         ->orWhere('nama_pt', 'LIKE', '%'.$q.'%')
                         ->groupBy('t_jurnal.id_jurnal')
-                        // ->orWhere('nama_kategori', 'LIKE', '%'.$q.'%')
                         ->paginate(10)
                         ->appends(request()->query());
                         

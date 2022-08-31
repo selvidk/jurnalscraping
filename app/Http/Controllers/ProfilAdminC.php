@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataAdminM;
 use Illuminate\Support\Facades\Mail;
-// use App\Mail\LupaSandiMail;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -69,12 +68,9 @@ class ProfilAdminC extends Controller
             ];
 
             $this->model->data()->where('email', auth()->user()->email)->update($data);
-
-            // Mail::to(auth()->user()->email)->send(new UpdateSandiMail(Auth::user()->email));
-            // Session::flash('sukses', 'Berhasil memperbarui password');
             return redirect()->route('profil')->with('sukses', 'Berhasil merubah password.');
         }
-        // Session::flash('error', 'password saat ini tidak sama.');
+
         return redirect()->route('profil')->with('error', 'password saat ini tidak sama.');
     }
 
@@ -82,29 +78,5 @@ class ProfilAdminC extends Controller
     {
         $this->model->data()->where('email', $email)->delete();
         return redirect()->route('data_admin');
-    }
-
-    public function gotoReset()
-    {
-        // $request->validate([
-        //     'email' => 'required|email',
-        // ]);
-
-        $data   = $this->model->data()->where('email', Auth::user()->email)->get();
-
-        if (count($data) == 0) {
-            Session::flash('error', 'Email tidak ada dalam daftar');
-            return redirect()->back();
-        } else {
-            // $token = Str::random(64);
-            $email    = $data[0]->email;
-            $password = $data[0]->password;
-            $link     = route('verif_token', ['email' => $email, 'token' => $password]);
-            // return $email.$password;
-            Mail::to($data[0]->email)->send(new LupaSandiMail($data[0]->nama_admin, $link));
-
-            Session::flash('sukses', 'Periksa email Anda untuk merubah password. Periksa pada SPAM jika tidak terdapat di kotak masuk');
-            return redirect()->route('profil');
-        }
     }
 }

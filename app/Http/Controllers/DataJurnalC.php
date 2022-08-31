@@ -24,9 +24,6 @@ class DataJurnalC extends Controller
 
     public function index()
     {
-        // $data = $this->model->data()
-        //         ->join('t_pt', 't_pt.id_pt', '=', 't_jurnal.id_pt')
-        //         ->paginate(10);
         $data = $this->model->data()
                 ->join('t_pt', 't_pt.id_pt', '=', 't_jurnal.id_pt')
                 ->get();
@@ -36,17 +33,6 @@ class DataJurnalC extends Controller
 
     public function create(Request $request)
     {
-        // $input = $request->validate([
-        //     'nama_jurnal'   => 'required|max:100',
-        //     'url'           => $request->url,
-        //     'peringkat'     => $request->peringkat,
-        //     'id_pt'         => Hash::make($request->email),
-        // ]);
-
-        // if ($input->fails()) {
-        //     Session::flash('gagal', 'Periksa kembali masukan anda');
-        //     return redirect()->route('data_admin');
-        // }
         $pt = $this->pt->data()->where('nama_pt', $request->pt)->first();
 
         $data    = [
@@ -100,10 +86,6 @@ class DataJurnalC extends Controller
         $j_kategori = $this->kategori->data()->where('id_jurnal', $kode)->get();
         $j_publikasi= $this->publikasi->data()->where('id_jurnal', $kode)->get();
         
-        // $j_publikasi       = $this->model->data()
-        //                     ->leftJoin('t_publikasi_jurnal', 't_publikasi_jurnal.id_jurnal', '=', 't_jurnal.id_jurnal')
-        //                     ->where('t_jurnal.id_jurnal', $kode)
-        //                     ->get();
         $kategori   = $this->kategori->data()->groupBy('nama_kategori')->get();
 
         return view('admin.detailJurnal', ['data' => $data, 'j_kategori' => $j_kategori, 'kategori' => $kategori, 'j_publikasi' => $j_publikasi]);

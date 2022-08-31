@@ -37,7 +37,6 @@
 				<div class="card">
 					<div class="card-header">
 						<h5 class="card-title mb-0">Data Umum Jurnal</h5>
-						{{-- <p class="text-primary mb-0">Anda bisa melakukan perubahan data.</p> --}}
 					</div>
 					<div class="card-body">
 						<form action="/detail_jurnal/edit/{{ $data->id_jurnal }}" method="POST">
@@ -48,22 +47,18 @@
 										<div class="d-flex align-items-center d-flex justify-content-between mb-2">
 											<label class="form-label mb-0" for="inputUsername">URL</label>
 											<a href="{{ $data->url }}" class="badge badge-primary-light" target="_blank">Kunjungi Website</a>
-											{{-- <button type="button" class="btn btn-sm btn-pill btn-primary float-right mb-1" name="simpan" id="simpan">Kunjungi Website</button> --}}
 										</div>
 										<input type="url" class="form-control" id="url" name="url" placeholder="URL" value="{{ $data->url }}" required>
 									</div>
 									<div class="mb-3">
 										<label class="form-label" for="inputUsername">Nama Jurnal</label>
 										<textarea name="nama_jurnal" class="form-control" id="nama_jurnal" rows="2" required>{{ $data->nama_jurnal }}</textarea>
-										{{-- <input type="text" class="form-control" id="nama_jurnal" name="nama_jurnal" placeholder="{{ $data->nama_jurnal }}" value=""> --}}
 									</div>
 									<div class="mb-3">
 										<label class="form-label" for="inputUsername">Perguruan Tinggi</label>
 										<select class="form-control" id="pt" name="pt" required>
 											<option value="{{ $data->id_pt }}">{{ $data->nama_pt }}</option>
 											<option disabled>Choose...</option>
-											{{-- @foreach ($kategori as $kategori)
-											<option value="{{ $kategori->id_kategori }}">{{ $kategori->nama_kategori }}</option> --}}
 										</select>
 									</div>
 									<div class="row">
@@ -99,9 +94,6 @@
 					<div class="card-header">
 						<h5 class="card-title mb-0">Data Publikasi Jurnal</h5>
 					</div>
-					{{-- @php
-						$image = DB::table('gambar')->where('produk_id', $p->id_produk)->get();
-					@endphp --}}
 					<div class="card-body">
 						<form action="/detail_jurnal/tambah/jp/{{ $data->id_jurnal }}" method="post">
 							{{ csrf_field() }}
@@ -240,9 +232,6 @@
 					<div class="card-header">
 						<h5 class="card-title mb-0">Data Kategori Jurnal</h5>
 					</div>
-					{{-- @php
-						$image = DB::table('gambar')->where('produk_id', $p->id_produk)->get();
-					@endphp --}}
 					<div class="card-body">
 						<form action="/detail_jurnal/tambah/kat/{{ $data->id_jurnal }}" method="post" enctype="multipart/form-data">
 							{{ csrf_field() }}

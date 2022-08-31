@@ -80,8 +80,4 @@ Route::middleware(['role: 1'])->group(function (){
 
 Route::get('/lupa_password', 'Auth\ForgotPasswordController@index');
 
-Route::post('/goto_reset', 'AkunC@gotoReset');
-Route::get('/verif_token', 'AkunC@verifyToken')->name('verif_token');
-Route::post('/reset_password/{email}', 'AkunC@resetPass');
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -4,10 +4,6 @@
 <main class="content">
 	<div class="container-fluid p-0">
 		<h1 class="h3 mb-2">
-			{{-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up mr-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="back()">
-			<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-			<path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1"></path>
-		 	</svg> --}}
 			Pengaturan Profil & Password
 		</h1>
 		@if(session()->has('sukses'))
@@ -33,13 +29,6 @@
 				</div>
 			</div>
 		@endif
-		{{-- @error ('password')
-			<div class="alert alert-danger alert-dismissible" role="alert">
-				<div class="alert-message">
-					<strong>{{ $message }}</strong>
-				</div>
-			</div>
-		@enderror --}}
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-3" align="center">
@@ -57,9 +46,6 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card" style="box-shadow: none;">
-									{{-- <div class="card-header">
-										<h5 class="card-title mb-0">Profil</h5>
-									</div> --}}
 									<div class="card-body">
 										@foreach ($data as $data)
 											<form action="{{ Route('edit_profil') }}" method="POST">
@@ -86,16 +72,12 @@
 					</div>
 					<div class="tab-pane" id="password" role="tabpanel">
 						<div class="card" style="box-shadow: none;">
-							{{-- <div class="card-header">
-								<h5 class="card-title mb-0">Password</h5>
-							</div> --}}
 							<div class="card-body">
 								<form action="{{ Route('edit_password') }}" method="POST">
 									{{ csrf_field() }}
 									<div class="mb-3">
 										<label class="form-label">Password Lama</label>
 										<input type="password" class="form-control" id="password" name='password' required>
-										{{-- <small><a href="/lupa_pass">Lupa password?</a></small> --}}
 									</div>
 									<div class="mb-3">
 										<label class="form-label" for="inputPasswordNew">Password Baru</label>
@@ -112,11 +94,7 @@
 					</div>	
 				</div>
 			</div>
-			
 		</div>
 	</div>
-	{{-- <div class="col-md-9 col-xl-10">
-				
-			</div> --}}
 </main>
 @endsection

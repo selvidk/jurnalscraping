@@ -15,12 +15,6 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-	<!-- Choose your prefered color scheme -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-
-	<!-- BEGIN SETTINGS -->
-	<!-- Remove this after purchasing -->
 	<link class="js-stylesheet" href="{{ url('admin/css/light.css')}}" rel="stylesheet">
 	<script src="js/settings.js"></script>
 	<style>
@@ -78,7 +72,6 @@
 										<span style="color: grey">*masukkan Email yang Anda gunakan untuk login</span>
 										<div class="text-center mt-3">
 											<button type="submit" class="btn btn-lg btn-primary">Kirim Email</button>
-											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
 										</div>
 									</form>
 								</div>

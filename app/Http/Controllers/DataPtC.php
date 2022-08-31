@@ -15,13 +15,11 @@ class DataPtC extends Controller
     {
         $this->middleware('auth');
         $this->model = new DataPtM();
-        // $this->kategori = new DataKategoriM();
     }
 
     public function index()
     {
         $data = $this->model->data()
-                // ->join('t_pt', 't_pt.id_pt', '=', 't_jurnal.id_pt')
                 ->groupBy('nama_pt')
                 ->get();
 
@@ -63,14 +61,9 @@ class DataPtC extends Controller
             'alamat'  => $request->alamat,
         ]; 
 
-        // $cek = $this->model->data()->where('nama_pt', $request->nama_pt)->count();
+        $this->model->data()->where('id_pt', $kode)->update($data);
+        Session::flash('sukses', 'Berhasil memperbarui data');
 
-        // if ($cek == 0) {
-        //     Session::flash('gagal', 'Tidak dapat memperbarui data, data sudah ada');
-        // } else {
-            $this->model->data()->where('id_pt', $kode)->update($data);
-            Session::flash('sukses', 'Berhasil memperbarui data');
-        // }
         return redirect()->route('daftar_pt');
     }
 

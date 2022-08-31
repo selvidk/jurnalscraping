@@ -28,7 +28,6 @@
 									<div class="col-sm-12">
 										<label><h5 class="card-title">Data Jurnal
 											<!--@if (Auth::user()->level == 1)-->
-											<!--	<a type="button" data-toggle="modal" data-target="#tambah"><button class="btn btn-pill btn-primary btn-sm ml-2"><i class="fas fa-plus"></i></i></button></a>-->
 											<!--@endif-->
 											</h5>
 										</label>
@@ -54,40 +53,16 @@
 															<label class="form-label" for="inputUsername">Perguruan Tinggi</label>
 															<input type="text" class="form-control" id="pt" name="pt" placeholder="Perguruan Tinggi" required>
 														</div>
-														{{-- <div class="mb-3">
-															<label class="form-label" for="inputUsername">URL</label>
-															<input type="url" class="form-control" id="url" name="url" placeholder="URL" required>
-														</div> --}}
 													</div>
 													<div class="modal-footer">
 														<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
 														<button type="submit" class="btn btn-primary">Tambahkan Data</button>
 													</div>
 												</form>
-												{{-- <div class="modal-body m-3">
-													<p class="mb-0">Yakin ingin menghapus kategori <strong></strong>?</p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-													<form action="/deleteKategori/" method="post">
-														{{ csrf_field() }}
-														@method('delete')
-														<button type="submit" class="btn btn-primary">Hapus</button>
-													</form>
-												</div> --}}
 											</div>
 										</div>
 									</div>
 								</div>
-								{{-- <div class="row">
-									<div class="col-sm-4 mt-1">
-										<form action="/">
-											<div class="col-auto">
-												<input type="text" class="form-control bg-light rounded-2 border-0" placeholder="Search..">
-											</div>
-										</form>
-									</div>
-								</div> --}}
 							</div>
 							
 							<div class="table-responsive mb-3 mx-3">

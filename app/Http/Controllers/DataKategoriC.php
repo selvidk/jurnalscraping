@@ -14,7 +14,6 @@ class DataKategoriC extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        // $this->model = new DataPtM();
         $this->model = new DataKategoriM();
         $this->iKategori= new IndexKategoriM();
     }
@@ -23,8 +22,6 @@ class DataKategoriC extends Controller
     {
         $data = DB::table('t_kategori')
                 ->select(DB::raw('count(*) as total, nama_kategori'))
-                // ->join('t_pt', 't_pt.id_pt', '=', 't_jurnal.id_pt')
-                // ->groupBy('id_jurnal')
                 ->groupBy('nama_kategori')
                 ->get();
 
@@ -36,11 +33,6 @@ class DataKategoriC extends Controller
         $input = $request->validate([
             'nama_kategori' => 'required|max:20',
         ]);
-
-        // if ($input->fails()) {
-        //     Session::flash('gagal', 'Periksa kembali masukan anda');
-        //     return redirect()->route('data_admin');
-        // }
 
         $data    = [
             'nama_kategori'      => $request->nama_kategori,
@@ -72,14 +64,6 @@ class DataKategoriC extends Controller
 
         Session::flash('sukses', 'Berhasil memperbarui data.');
 
-        // if ($getT[0]->total == 1) {
-        //     $cek = $this->model->data()->where('nama_kategori', $kode)->first();
-        //     $cek->id_jurnal == NULL ? $total = 0 : $total = $getT[0]->total;
-        //     Session::flash('sukses', 'Berhasil memperbarui data untuk '.$total.' jurnal');
-        // } else {
-        //     $total = $getT[0]->total;
-        //     Session::flash('sukses', 'Berhasil memperbarui data untuk '.$total.' jurnal');
-        // }
         return redirect()->route('daftar_kategori');
     }
 

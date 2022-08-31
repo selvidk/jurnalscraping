@@ -15,20 +15,17 @@ class DataPencarianC extends Controller
     {
         $this->middleware('auth');
         $this->model = new PencarianM();
-        // $this->kategori = new DataKategoriM();
     }
 
     public function index(Request $request)
     {
         if ($request->has('periode')) {
              $data = $this->model->data()
-                    // ->join('t_pt', 't_pt.id_pt', '=', 't_jurnal.id_pt')
                     ->whereYear('tgl_pencarian', explode('-', $request->periode)[0])
                     ->whereMonth('tgl_pencarian', explode('-', $request->periode)[1])
                     ->get();
         } else {
             $data = $this->model->data()
-                    // ->join('t_pt', 't_pt.id_pt', '=', 't_jurnal.id_pt')
                     ->whereYear('tgl_pencarian', date('Y'))
                     ->whereMonth('tgl_pencarian', date('m'))
                     ->get();
@@ -72,14 +69,9 @@ class DataPencarianC extends Controller
             'alamat'  => $request->alamat,
         ]; 
 
-        // $cek = $this->model->data()->where('nama_pt', $request->nama_pt)->count();
+        $this->model->data()->where('id_pt', $kode)->update($data);
+        Session::flash('sukses', 'Berhasil memperbarui data');
 
-        // if ($cek == 0) {
-        //     Session::flash('gagal', 'Tidak dapat memperbarui data, data sudah ada');
-        // } else {
-            $this->model->data()->where('id_pt', $kode)->update($data);
-            Session::flash('sukses', 'Berhasil memperbarui data');
-        // }
         return redirect()->route('daftar_pt');
     }
 

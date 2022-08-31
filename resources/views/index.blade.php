@@ -11,22 +11,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ url('search/css/styles.css')}}" rel="stylesheet" />
-        {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-        <style>
-            /* @media screen and (min-width: 576px) {.filter {display: none;}} */
-            /* @media screen and (min-width: 768px) {.filter {display: none;}}
-            @media screen and (min-width: 992px) {.filter {display: none;}} */
-            /* @media (min-width: 768px) {
-                .collapse:not(.show) {
-                    display: none;
-                }
-            } */
-            /* @media only screen and (min-width: 1400px) {.filter {display: none;}}
-            @media only screen and (min-width: 1200px){.filter {display: block;}} */
-        </style>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -46,20 +32,12 @@
             <div class="row d-flex justify-content-center" style="padding-left: 25px; padding-right: 25px;">
                 <!-- Side widgets-->
                 <div class="col-lg-12 mt-3 mb-3">
-                    {{-- <div class="sticky-top" style="top:100px;"> --}}
-                        <!-- Search widget-->
-                        {{-- <div class="card mb-4"> --}}
-                            {{-- <div class="card-header">Pencarian</div>
-                            <div class="card-body"> --}}
-                                <form action="/pencarian" method="GET">
-                                    <div class="input-group">
-                                        <input class="form-control" type="search" placeholder="Lakukan pencarian jurnal, nama perguruan tinggi atau lainnya" aria-label="Pencarian" aria-describedby="button-search" name="kata_kunci" value="{{ Route::is('pencarian') ? NULL : old('kata_kunci') }}" />
-                                        <button class="btn btn-primary" type="submit">Cari</button>
-                                    </div>
-                                </form>
-                            {{-- </div> --}}
-                        {{-- </div> --}}
-                    {{-- </div> --}}
+                    <form action="/pencarian" method="GET">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Lakukan pencarian jurnal, nama perguruan tinggi atau lainnya" aria-label="Pencarian" aria-describedby="button-search" name="kata_kunci" value="{{ Route::is('pencarian') ? NULL : old('kata_kunci') }}" />
+                            <button class="btn btn-primary" type="submit">Cari</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -69,17 +47,6 @@
                 <!-- Side widgets-->
                 <div class="col-lg-4 mt-3 mb-3">
                     <div class="sticky-top" style="top:90px;">
-                        <!-- Search widget-->
-                        {{-- <div class="card mb-4">
-                            <div class="card-header">Pencarian</div>
-                            <div class="card-body">
-                                <form action="/pencarian" method="GET">
-                                    <div class="input-group">
-                                        <input class="form-control" type="search" placeholder="Pencarian" aria-label="Pencarian" aria-describedby="button-search" name="kata_kunci" value="{{ Route::is('pencarian') ? NULL : old('kata_kunci') }}"/>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> --}}
                         <!-- Categories widget-->
                         <div class="card mb-4">
                             <form action="/pencarian" method="GET">
@@ -102,9 +69,7 @@
                                 <div class="card-body collapse show" id="filter">
                                     <div class="row">
                                         <div class="col-md-12 mb-2">
-                                            {{-- <a data-bs-toggle="collapse" href="#akreditasi" role="button" aria-expanded="false" aria-controls="collapseExample"> --}}
-                                                <span style="font-weight: 470">Jurnal Terakreditasi</span>
-                                            {{-- </a> --}}
+                                            <span style="font-weight: 470">Jurnal Terakreditasi</span>
                                         </div>
                                     </div>
                                     <div class="row" id="akreditasi">
@@ -124,30 +89,6 @@
                                                     </div>
                                                 @endfor
                                             </div>
-                                            {{-- <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">2</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                                <label class="form-check-label" for="inlineCheckbox3">3</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                                                <label class="form-check-label" for="inlineCheckbox4">4</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                                                <label class="form-check-label" for="inlineCheckbox5">5</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-                                                <label class="form-check-label" for="inlineCheckbox6">6</label>
-                                            </div> --}}
                                         </div>
                                     </div>
                                     {{-- <hr class="mb-0 mt-2 border border-1 border border-dark"> --}}
@@ -228,31 +169,10 @@
                                 </div>
                             </form>
                         </div>
-                        {{-- } --}}
-                       
-                        <!-- Side widget-->
-                        {{-- <div class="card mb-4">
-                            <div class="card-header">Filter Kategori Jurnal</div>
-                            <div class="card-body">
-                                <div class="row">
-                                    @foreach ($kategori as $k)
-                                        <div class="col-sm-6">
-                                            <div div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{ $k->id_kategori }}">
-                                                <label class="form-check-label">{{ $k->nama_kategori }}</label>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-8 mt-3">
-                    {{-- <div class=" position-fixed" style="top:100px"> --}}
-                    <!-- Post content-->
                     <article>
-                        <!-- Post header-->
                         <header class="mb-2">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-5">
@@ -261,118 +181,114 @@
                                 </div>
                                 <div id="pagi" class="col-md-7 d-flex justify-content-end mt-1">
                                     {{ $data->onEachSide(1)->links() }}
-                                    {{-- {{ $data->appends(request()->query())->links('vendor.pagination.custom') }} --}}
                                 </div>
                             </div>
                         </header>
                     </article>
-                    {{-- </div> --}}
                     <section class="mb-5">
                         <div class="card" style="border: none;" >
-                            {{-- <div class="card-body"> --}}
-                                <div class="row">
-                                    @foreach ($data as $key=>$d)
-                                        @php
-                                            $j_kat = DB::table('t_kategori')->where('id_jurnal', $d->id_jurnal)->get();
-                                            $j_jdw = DB::table('t_publikasi_jurnal')->where('id_jurnal', $d->id_jurnal)->get();
-                                        @endphp
-                                        <div class="col-md-6 mb-3">
-                                            <div class="card bg-light" style="border: none">
-                                                <div class="card-body p-3 px-4">
-                                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4"><span>S{{ $d->peringkat }}</span></div>
-                                                    <a href="{{ $d->url }}" style="text-decoration: none;" target="_blank"><h6 class="fw-bold">{{ $d->nama_jurnal }}</h6></a>
-                                                    {{-- <div class="small text-muted">- Client Name, Location</div> --}}
-                                                    <h6 class="mb-0">{{ $d->nama_pt }}</h6><hr class="mb-0 mt-2 border border-1 border border-primary">
-                                                    <ul class="list-unstyled mt-1 mb-0">
-                                                        <li class="mb-2">
-                                                            <div class="d-flex">
-                                                                <div class="flex-shrink-0"><i class="bi bi-signpost"></i></div>
-                                                                <div class="ms-2">
-                                                                    @if (count($j_kat) == 0 || $d->id_jurnal == null)
-                                                                        <span>-</span>
-                                                                    @else
-                                                                        @for ($i = 0; $i < count($j_kat); $i++)
-                                                                            <span>{{ $j_kat[$i]->nama_kategori }}
-                                                                            @if ($i+1 != count($j_kat))
-                                                                                |
+                            <div class="row">
+                                @foreach ($data as $key=>$d)
+                                    @php
+                                        $j_kat = DB::table('t_kategori')->where('id_jurnal', $d->id_jurnal)->get();
+                                        $j_jdw = DB::table('t_publikasi_jurnal')->where('id_jurnal', $d->id_jurnal)->get();
+                                    @endphp
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card bg-light" style="border: none">
+                                            <div class="card-body p-3 px-4">
+                                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4"><span>S{{ $d->peringkat }}</span></div>
+                                                <a href="{{ $d->url }}" style="text-decoration: none;" target="_blank"><h6 class="fw-bold">{{ $d->nama_jurnal }}</h6></a>
+                                                {{-- <div class="small text-muted">- Client Name, Location</div> --}}
+                                                <h6 class="mb-0">{{ $d->nama_pt }}</h6><hr class="mb-0 mt-2 border border-1 border border-primary">
+                                                <ul class="list-unstyled mt-1 mb-0">
+                                                    <li class="mb-2">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0"><i class="bi bi-signpost"></i></div>
+                                                            <div class="ms-2">
+                                                                @if (count($j_kat) == 0 || $d->id_jurnal == null)
+                                                                    <span>-</span>
+                                                                @else
+                                                                    @for ($i = 0; $i < count($j_kat); $i++)
+                                                                        <span>{{ $j_kat[$i]->nama_kategori }}
+                                                                        @if ($i+1 != count($j_kat))
+                                                                            |
+                                                                        @endif
+                                                                        </span>
+                                                                    @endfor
+                                                                @endif
+                                                                {{-- @foreach ($j_kat as $j_k)
+                                                                <span class="badge bg-secondary">{{ $j_k->nama_kategori }} </span>
+                                                                @endforeach --}}
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0"><i class="bi bi-calendar-week-fill"></i></div>
+                                                            <div class="ms-2">
+                                                                @if (count($j_jdw) == 0 || $d->id_jurnal == null)
+                                                                    <span>-</span>
+                                                                @else
+                                                                    @for ($i = 0; $i < count($j_jdw); $i++)
+                                                                    @switch($j_jdw[$i]->bulan)
+                                                                        @case(1)
+                                                                            @php $bln = "Januari"; @endphp @break
+                                                                        @case(2)
+                                                                            @php $bln = "Februari"; @endphp @break
+                                                                        @case(3)
+                                                                            @php $bln = "Maret"; @endphp @break
+                                                                        @case(4)
+                                                                            @php $bln = "April"; @endphp @break
+                                                                        @case(5)
+                                                                            @php $bln = "Mei"; @endphp @break
+                                                                        @case(6)
+                                                                            @php $bln = "Juni"; @endphp @break
+                                                                        @case(7)
+                                                                            @php $bln = "Juli"; @endphp @break
+                                                                        @case(8)
+                                                                            @php $bln = "Agustus"; @endphp @break
+                                                                        @case(9)
+                                                                            @php $bln = "September"; @endphp @break
+                                                                        @case(10)
+                                                                            @php $bln = "Oktober"; @endphp @break
+                                                                        @case(11)
+                                                                            @php $bln = "November"; @endphp @break
+                                                                        @case(12)
+                                                                            @php $bln = "Desember"; @endphp @break
+                                                                    @endswitch
+                                                                        <span>{{ $bln }}
+                                                                            @if ($i+1 != count($j_jdw))
+                                                                            |
                                                                             @endif
-                                                                            </span>
-                                                                        @endfor
-                                                                    @endif
-                                                                    {{-- @foreach ($j_kat as $j_k)
-                                                                    <span class="badge bg-secondary">{{ $j_k->nama_kategori }} </span>
-                                                                    @endforeach --}}
-                                                                </div>
+                                                                        </span>
+                                                                    @endfor
+                                                                @endif
                                                             </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">
-                                                                <div class="flex-shrink-0"><i class="bi bi-calendar-week-fill"></i></div>
-                                                                <div class="ms-2">
-                                                                    @if (count($j_jdw) == 0 || $d->id_jurnal == null)
-                                                                        <span>-</span>
-                                                                    @else
-                                                                        @for ($i = 0; $i < count($j_jdw); $i++)
-                                                                        @switch($j_jdw[$i]->bulan)
-                                                                            @case(1)
-                                                                                @php $bln = "Januari"; @endphp @break
-                                                                            @case(2)
-                                                                                @php $bln = "Februari"; @endphp @break
-                                                                            @case(3)
-                                                                                @php $bln = "Maret"; @endphp @break
-                                                                            @case(4)
-                                                                                @php $bln = "April"; @endphp @break
-                                                                            @case(5)
-                                                                                @php $bln = "Mei"; @endphp @break
-                                                                            @case(6)
-                                                                                @php $bln = "Juni"; @endphp @break
-                                                                            @case(7)
-                                                                                @php $bln = "Juli"; @endphp @break
-                                                                            @case(8)
-                                                                                @php $bln = "Agustus"; @endphp @break
-                                                                            @case(9)
-                                                                                @php $bln = "September"; @endphp @break
-                                                                            @case(10)
-                                                                                @php $bln = "Oktober"; @endphp @break
-                                                                            @case(11)
-                                                                                @php $bln = "November"; @endphp @break
-                                                                            @case(12)
-                                                                                @php $bln = "Desember"; @endphp @break
-                                                                        @endswitch
-                                                                            <span>{{ $bln }}
-                                                                                @if ($i+1 != count($j_jdw))
-                                                                                |
-                                                                                @endif
-                                                                            </span>
-                                                                        @endfor
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="row d-flex justify-content-between">
-                                            <div class="col-md-5">
-                                                <span class="text-muted fst-italic">Total Data : {{ $data->total() }}</span></br>
-                                                <span class="text-muted fst-italic">{{ ceil($data->total()/10) }} Halaman</span>
-                                            </div>
-                                            <div id="pagi2" class="col-md-7 d-flex justify-content-end mt-1">
-                                                {{-- <nav aria-label="Page navigation example"> --}}
-                                                {{-- {{ $data->links('vendor.pagination.custom') }} --}}
-                                                {{ $data->onEachSide(1)->links() }}
-                                                {{-- {!! $data->onEachSide(3)->links('vendor.pagination.custom') !!} --}}
-                                                {{-- </nav> --}}
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
+                                @endforeach
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-md-5">
+                                            <span class="text-muted fst-italic">Total Data : {{ $data->total() }}</span></br>
+                                            <span class="text-muted fst-italic">{{ ceil($data->total()/10) }} Halaman</span>
+                                        </div>
+                                        <div id="pagi2" class="col-md-7 d-flex justify-content-end mt-1">
+                                            {{-- <nav aria-label="Page navigation example"> --}}
+                                            {{-- {{ $data->links('vendor.pagination.custom') }} --}}
+                                            {{ $data->onEachSide(1)->links() }}
+                                            {{-- {!! $data->onEachSide(3)->links('vendor.pagination.custom') !!} --}}
+                                            {{-- </nav> --}}
+                                        </div>
+                                    </div>
                                 </div>
-                            {{-- </div> --}}
+                            </div>
                         </div>
                     </section>
                 </div>

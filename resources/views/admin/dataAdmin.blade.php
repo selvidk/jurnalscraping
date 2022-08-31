@@ -71,13 +71,6 @@
 										</div>
 									</div>
 								</div>
-								{{-- <div class="row">
-									<div class="col-sm-12 col-md-4 mt-1">
-										<div id="example_filter" class="dataTables_filter">
-											<input type="search" class="form-control form-control-sm" placeholder="Search" aria-controls="example">
-										</div>
-									</div>
-								</div> --}}
 							</div>
 							<div class="table-responsive">
 								<table class="table table-striped table-hover">
@@ -182,12 +175,4 @@
 		</div>
 	</div>
 </main>
-{{-- <script>
-$(document).on('ajaxComplete ready', function () {
-    $('.modalMd').off('click').on('click', function () {
-        $('#modalMdContent').load($(this).attr('value'));
-        $('#modalMdTitle').html($(this).attr('title'));
-    });
-});
-</script> --}}
 @endsection
