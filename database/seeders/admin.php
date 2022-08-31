@@ -16,10 +16,10 @@ class admin extends Seeder
     public function run()
     {
         DB::table('t_admin')->insert([
-            'email'      => 'superadmin@gmail.com',
-            'nama_admin' => 'super admin',
-            'password'   => Hash::make('superadmin'),
-            'level'      => 'Super Admin',
+            'email'      => 'admin@gmail.com',
+            'nama_admin' => 'admin',
+            'password'   => Hash::make('admin'),
+            'level'      => 'SuperAdmin',
             'tgl_buat'   => date('Y-m-d H:i:s'),
         ]);
     }
