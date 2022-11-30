@@ -15,6 +15,7 @@ Fitur aplikasi ini antara lain adalah:
 - HTML5
 - Template Bootstrap 5, [Startbootsrap](https://startbootstrap.com/) dan [Adminkit](https://demo.adminkit.io/?theme=default)
 - JavaScript
+- [Library Goutte](https://github.com/FriendsOfPHP/Goutte)
 - MySQL
 
 ## Pemasangan
