@@ -15,14 +15,10 @@ Fitur aplikasi ini antara lain adalah:
 - HTML5
 - Template Bootstrap 5, [Startbootsrap](https://startbootstrap.com/) dan [Adminkit](https://demo.adminkit.io/?theme=default)
 - JavaScript
-- MySQL (dengan XAMPP)
-
-## Package yang perlu diinstal untuk projek ini
-- [Library Goutte](https://github.com/FriendsOfPHP/Goutte). Diperlukan untuk proses scraping 
+- MySQL
 
 ## Pemasangan
 1. Unduh projek dan tambahkan file .env
 2. Import database
-3. Pasang library Goutte
-4. Jalankan program
+3. Jalankan composer update dan jalankan program
 5. Akses ke halaman admin melalui "url_utama/login" dengan email admin@gmail.com dan password admin
